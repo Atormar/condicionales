@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nº de generacion</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: crimson;
+            font-family: fantasy;
+        }
+        #numerito{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #botoncito{
+            font-style: italic;
+        }
+    </style>
+<h1>Segun el numero de la pokedex, diremos de que generacion es</h1>
+Introduce el numero usando esto<br>
+<input type="range" id="pokemon2" min="1" max="890" onchange="cambio(this)"><br>
+<input type="button" value="Comprobar generacion" id="botoncito" onclick="generacion()"><br>
+<div id="numerito">Aqui ira el numero de tu pokemon</div>
+    <script>
+        function cambio(element){
+            document.getElementById("numerito").innerHTML = element.value;
+        }
+      function generacion(){
+        var pokemon= document.getElementById("pokemon2").value
+        //alert(pokemon)
+        if(pokemon<151){
+            alert("tu pokemon es de primera generacion")
+        }else{
+            if(pokemon<251){
+                alert("tu pokemon es de la segunda generacion")
+            }else{
+                if(pokemon<386){
+                    alert("tu pokemon es de tercera generacion")
+                }else{
+                    if(pokemon<494){
+                        alert("tu pokemon es de cuarta generacion")
+                    }else{
+                        if(pokemon<649){
+                            alert("tu pokemon es de quinta generacion")
+                        }else{
+                            if(pokemon<721){
+                                alert("tu pokemon es de sexta generacion")
+                            }else{
+                                if(pokemon<810){
+                                    alert("tu pokemon es de septima generacion")
+                                }else{
+                                    alert("tu pokemon es de octava generacion")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+      }
+    </script>
+</body>
+</html>
